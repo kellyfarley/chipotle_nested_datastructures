@@ -1,10 +1,10 @@
 #The menu board at Chipotle Reads: 
-main = {
-	style: ["burrito", "bowl", "crispy corn tacos", "soft corn tacos", "soft flour tacos", "salad"],
-	meat: ["steak", "carnitas", "chicken", "barbacoa", "sofritas"],
-	rice_bean_veg: ["cilantro-lime brown rice", "cilantro-lime white rice", "black beans", "pinto beans", "fajita veggies"],
-	toppings: ["sour cream", "guacamole", "cheese", "romaine lettuce", "roasted chili-corn salsa", "tomatillo green-chilli salsa (medium hot)", "tomatillo red-chilli salsa (hot)", "fresh tomato salsa (mild)"]
-}
+#main = {
+	#style: ["burrito", "bowl", "crispy corn tacos", "soft corn tacos", "soft flour tacos", "salad"],
+	#meat: ["steak", "carnitas", "chicken", "barbacoa", "sofritas"],
+	#rice_bean_veg: ["cilantro-lime brown rice", "cilantro-lime white rice", "black beans", "pinto beans", "fajita veggies"],
+	#toppings: ["sour cream", "guacamole", "cheese", "romaine lettuce", "roasted chili-corn salsa", "tomatillo green-chilli salsa (medium hot)", "tomatillo red-chilli salsa (hot)", "fresh tomato salsa (mild)"]
+#}
 
 #This line should not be changed, it is the starting hash for your order! 
 my_order = {}
@@ -17,41 +17,42 @@ my_order = {}
 		#my_order = { style: "burrito", meat: "chicken", rice_bean_veg: ["cilantro-lime brown rice", "black beans"], toppings: ["guacamole", "cheese", "romaine lettuce"]}
 
 
-#########  LETS GO!  ##########
+#########  LET'S GO!  ##########
 
 #STEP ONE:
 	#you are in line at chipotle and what to know what different styles they have
 	#Display all the options available for style 
-
-
+#print main[:style]
 
 #STEP TWO:
 	#Using the empty my_order hash, 
 	#Chose your style from the available options and add a new key value pair to that hash
-
+my_order["style"] = "bowl"
 
 #STEP THREE:
 	#Chose what meat you want & add it to your my_order hash
+my_order["meat"] = "chicken"
 
 #STEP FOUR:
 	#Chose what rice, bean or veggies you want and it it as a new key value pair to my_order. 
 		#HINT: You may want to chose more than one option, how will you store multiples in your order?
+my_order["rice_bean_veg"] = ["cilantro-lime brown rice", "fajita veggies"]
 
 #STEP FIVE
 	#Check to see if your favorite topping is included in the available options
-
+#print main[:toppings]
 
 #STEP SIX
 	#Chose at least 3 toppings to add to your order
+my_order["toppings"] = ["guacamole", "cheese", "romaine lettuce", "fresh tomato salsa (mild)"]
 
 #STEP SEVEN
 	#Oops! You didn't want one of those toppings! How do you remove the second one you put in there?
-
+my_order["toppings"].delete("romaine lettuce")
 
 #STEP EIGHT
-	#Print your hash and see if your order was made correctly! Bon Appetit! 
-
-
+	#Print your hash and see if your order was made correctly! Bon Appetit!
+print my_order
 
 
 
@@ -60,7 +61,7 @@ my_order = {}
 		#This will be challenging when it comes to working with your multiple choices for toppings
 
 	#Example: "Can I please have a burrito. For meat, I would like chicken with cilantro-lime white rice and black beans. Then I would like sour cream, cheese and roasted-corn salsa as my toppings. Thank you!"
-
+print "Can I please have a " + my_order[:style] ". For meat, I would like" + my_order[:meat] + "with" + my_order[:rice_bean_veg] + ". Then I would like" + my_order[toppings] " as my toppings.  Thank you!"
 
 
 #### BONUS 2 #####
